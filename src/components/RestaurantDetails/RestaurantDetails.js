@@ -26,15 +26,18 @@ const RestaurantDetails = () => {
   }, []);
 
   const fetchData = async () => {
-    let response = await axios.get(`v3/businesses/${params?.id}`, {
-      headers: {
-        accept: "application/json",
-        "x-requested-with": "xmlhttprequest",
-        "Access-Control-Allow-Origin": "*",
-        Authorization:
-          "Bearer 3PW75iXnNgFsSrArLrQrtC5SHnilq7lNSVJ4LL-TSFiy19LLZJWh7zFv6F-_W9d9drKzoymoBSMQeVadhbcBA2cWWpfzQQCdmc0OIAEdZ1Pq1fjFFbTVxgK6L-YrY3Yx",
-      },
-    });
+    let response = await axios.get(
+      `https://api.yelp.com/v3/businesses/${params?.id}`,
+      {
+        headers: {
+          accept: "application/json",
+          "x-requested-with": "xmlhttprequest",
+          "Access-Control-Allow-Origin": "*",
+          Authorization:
+            "Bearer 3PW75iXnNgFsSrArLrQrtC5SHnilq7lNSVJ4LL-TSFiy19LLZJWh7zFv6F-_W9d9drKzoymoBSMQeVadhbcBA2cWWpfzQQCdmc0OIAEdZ1Pq1fjFFbTVxgK6L-YrY3Yx",
+        },
+      }
+    );
     setRestaurantDetail(response.data);
   };
 
