@@ -1,0 +1,37 @@
+html,
+body {
+    background-color: #fefefe;
+}
+
+.strip {
+    width: 150px;
+    height: 27px;
+    background: rgb(37, 111, 239);
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+}
+
+.content {
+    flex-direction: row;
+}
+
+
+.animated-container {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.animated-container:hover {
+    animation: ease-in-out;
+    border: 0.1rem solid rgb(232, 232, 232);
+    border-color: rgb(232, 232, 232);
+    box-shadow: rgb(28 28 28 / 12%) 0px 0.4rem 1.8rem;
+    box-sizing: border-box;
+}
+
+.item {
+    position: relative;
+    border-radius: 5px;
+}

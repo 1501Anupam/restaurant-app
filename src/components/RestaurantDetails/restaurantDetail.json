@@ -1,0 +1,99 @@
+{
+  "id": "lOCewxz6QNegZbArImNBfw",
+  "alias": "the-view-lounge-san-francisco",
+  "name": "The View Lounge",
+  "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/0qvwJ7mbQlo3SIyxpEPZGw/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "url": "https://www.yelp.com/biz/the-view-lounge-san-francisco?adjust_creative=9Mekvlml2Qc0mGZJdtNm1Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=9Mekvlml2Qc0mGZJdtNm1Q",
+  "phone": "+14158961600",
+  "display_phone": "(415) 896-1600",
+  "review_count": 1908,
+  "categories": [
+    {
+      "alias": "lounges",
+      "title": "Lounges"
+    },
+    {
+      "alias": "cocktailbars",
+      "title": "Cocktail Bars"
+    },
+    {
+      "alias": "tapasmallplates",
+      "title": "Tapas/Small Plates"
+    }
+  ],
+  "rating": 4.0,
+  "location": {
+    "address1": "780 Mission St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94103",
+    "country": "US",
+    "state": "CA",
+    "display_address": ["780 Mission St", "San Francisco, CA 94103"],
+    "cross_streets": "Opera Aly & 4th St"
+  },
+  "coordinates": {
+    "latitude": 37.785343,
+    "longitude": -122.404401
+  },
+  "photos": [
+    "https://s3-media2.fl.yelpcdn.com/bphoto/0qvwJ7mbQlo3SIyxpEPZGw/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/fGx1MmV6uaQ3wZapI2TzvA/o.jpg",
+    "https://s3-media1.fl.yelpcdn.com/bphoto/16saSPjVlfm6hHFadv-v2w/o.jpg"
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1600",
+          "end": "0000",
+          "day": 0
+        },
+        {
+          "is_overnight": true,
+          "start": "2130",
+          "end": "0100",
+          "day": 1
+        },
+        {
+          "is_overnight": true,
+          "start": "1600",
+          "end": "0100",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1600",
+          "end": "0000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1600",
+          "end": "0000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1600",
+          "end": "0000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1600",
+          "end": "0000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false
+    }
+  ],
+  "transactions": ["delivery"]
+}
