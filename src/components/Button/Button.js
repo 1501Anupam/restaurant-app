@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import "./Button.css";
-const Button = () => {
-  const navigate = useNavigate();
+const Button = ({ label, navigate, variant }) => {
   return (
     <button
-      className="btn btn-primary back-btn"
+      className={`button ${variant || "secondary"}`}
       type="button"
-      onClick={() => navigate(-1)}
+      onClick={() => navigate?.(-1)}
     >
-      Back
+      {label || "Back"}
     </button>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./RestaurantDetails.css";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "../Button/Button";
 
 const weekday = {
@@ -21,6 +21,8 @@ const RestaurantDetails = () => {
   const { name, image_url, display_phone, rating, review_count, hours } =
     restaurantDetail;
   const openHours = hours?.[0]?.open;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData();
@@ -71,7 +73,7 @@ const RestaurantDetails = () => {
       {isLoading && <p>Loading...</p>}
       <div className="row align-btn main-head w-100">
         <div className="col-2 col-sm-2 col-md-2">
-          <Button />
+          <Button navigate={navigate} />
         </div>
         <h2 className="col-8 col-sm-8 col-md-8 ">The {name}</h2>
       </div>
