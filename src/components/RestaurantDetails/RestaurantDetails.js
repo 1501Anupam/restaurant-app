@@ -75,7 +75,7 @@ const RestaurantDetails = () => {
         <div className="col-2 col-sm-2 col-md-2">
           <Button navigate={navigate} />
         </div>
-        <h2 className="col-8 col-sm-8 col-md-8 ">The {name}</h2>
+        <h2 className="col-8 col-sm-8 col-md-8 ">{name}</h2>
       </div>
       {!isLoading && (
         <div className="row justify-content-center w-100">
