@@ -5,8 +5,18 @@ body {
 
 .strip {
     width: 150px;
-    height: 27px;
+    height: 22px;
     background: rgb(37, 111, 239);
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+}
+
+.strip2 {
+    width: 150px;
+    height: 22px;
+    background: rgb(217, 38, 98);
     color: white;
     position: absolute;
     bottom: 10px;
@@ -19,7 +29,7 @@ body {
 
 
 .animated-container {
-    padding: 5px;
+    padding: 12px;
     border-radius: 5px;
 }
 
@@ -34,4 +44,14 @@ body {
 .item {
     position: relative;
     border-radius: 5px;
+}
+
+.res-text {
+    color: rgb(111 111 111);
+    font-weight: 500;
+}
+
+.checked {
+    color: rgb(36, 150, 63);
+    padding: 2px;
 }

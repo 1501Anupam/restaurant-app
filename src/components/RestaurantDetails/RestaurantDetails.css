@@ -7,6 +7,8 @@
 
 .main-head {
     padding: 6px;
+    margin: 15px 0px 25px 0px;
+    font-weight: 500;
 }
 
 .res-image {
@@ -26,13 +28,17 @@
 }
 
 .details-text {
-    line-height: 2;
-    /* color: rgb(105, 105, 105); */
-    margin: 0px;
+    /* line-height: 2; */
+    color: rgb(105, 105, 105);
+    margin: 10px 0px 2px;
     text-align: left;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
+}
+
+.details-text:hover {
+    font-weight: 600;
 }
 
 .details-card {
@@ -40,6 +46,26 @@
     border-radius: 5px;
 }
 
-.timings {
-    margin-left: 30px;
+.checked {
+    color: rgb(36, 150, 63);
+    padding: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .res-image {
+        border: 1px solid rgb(232, 232, 232);
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .res-image {
+        border: 1px solid rgb(232, 232, 232);
+        margin-bottom: 15px;
+    }
+
+}
+
+.align-btn {
+    align-items: center;
 }

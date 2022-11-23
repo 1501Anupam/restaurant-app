@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Restaurant.css";
 
 const Restaurant = ({ restaurant, index }) => {
@@ -22,15 +21,17 @@ const Restaurant = ({ restaurant, index }) => {
         }}
       >
         <div className="strip">50% OFF up to 100</div>
+        <div className="strip2">PRO extra 15% OFF</div>
       </div>
       <div className="content">
-        <label>Name: {name}</label>
+        <label className="res-text">Name: {name}</label>
         <br />
         <div>
-          <label>Price: {price}</label>
+          <label className="res-text">Price: {price}</label>
           &nbsp; &nbsp; &nbsp;
-          <label>
-            Rating: {rating} <FontAwesomeIcon icon="fa-solid fa-star" />
+          <label className="res-text">
+            Rating: {rating}
+            <span className="fa fa-star checked"></span>
           </label>
         </div>
       </div>

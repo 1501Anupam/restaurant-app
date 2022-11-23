@@ -7,10 +7,44 @@
 }
 
 .main-heading {
-    font-family: Okra, Helvetica, sans-serif;
     color: rgb(28, 28, 28);
-    font-size: 3rem;
-    margin: 1rem 0px 3.2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    margin-top: 15px;
     line-height: 1.2;
     font-weight: 500;
+}
+
+.search {
+    background: transparent;
+    width: 500px;
+    border: none;
+    border-bottom: 1px solid rgb(111 111 111);
+    ;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .search {
+        width: 300px;
+    }
+
+    .container {
+        grid-template: repeat(2, 300px) / repeat(1, 300px);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .search {
+        width: 400px;
+    }
+
+    .container {
+        grid-template: repeat(2, 200px) / repeat(2, 300px);
+    }
 }

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./RestaurantList.css";
 import axios from "axios";
 import Restaurant from "./Restaurant";
-import data from "./restaurantlist.json";
 
 const RestaurantList = () => {
   const [restaurantList, setRestaurantList] = useState([]);
+  const [filter, setFilter] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const fetchData = async () => {
+    setIsLoading(true);
     let response = await axios.get("v3/businesses/search", {
       headers: {
         accept: "application/json",
@@ -20,19 +22,44 @@ const RestaurantList = () => {
         latitude: 37.786882,
       },
     });
+    setIsLoading(false);
     let { businesses } = response.data;
     setRestaurantList(businesses);
+  };
+
+  const filterHandler = (e) => {
+    setFilter(e.target.value);
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
+  const filteredRestaurant = useMemo(() => {
+    if (!!filter) {
+      return restaurantList.filter(
+        (el) => el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1
+      );
+    } else {
+      return restaurantList;
+    }
+  }, [filter, restaurantList]);
+
   return (
     <div>
       <h2 className="main-heading">Delivery Restaurants in Delhi NCR</h2>
+      {isLoading && <p>Loading...</p>}
+      {!isLoading && (
+        <input
+          className="search"
+          type="text"
+          placeholder="Search your restaurant here..."
+          value={filter}
+          onChange={filterHandler}
+        />
+      )}
       <div className="container">
-        {restaurantList.map((restaurant, index) => (
+        {filteredRestaurant.map((restaurant, index) => (
           <Restaurant restaurant={restaurant} key={restaurant.id} />
         ))}
       </div>
