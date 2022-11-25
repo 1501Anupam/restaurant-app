@@ -8,7 +8,6 @@ const RestaurantList = () => {
   const [filter, setFilter] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const fetchData = async () => {
-    setIsLoading(true);
     let response = await axios.get("v3/businesses/search", {
       headers: {
         accept: "application/json",
@@ -22,7 +21,6 @@ const RestaurantList = () => {
         latitude: 37.786882,
       },
     });
-    setIsLoading(false);
     let { businesses } = response.data;
     setRestaurantList(businesses);
   };
@@ -33,17 +31,27 @@ const RestaurantList = () => {
 
   useEffect(() => {
     fetchData();
+    setIsLoading(false);
   }, []);
 
-  const filteredRestaurant = useMemo(() => {
-    if (!!filter) {
-      return restaurantList.filter(
-        (el) => el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1
-      );
-    } else {
-      return restaurantList;
-    }
-  }, [filter, restaurantList]);
+  // const filteredRestaurant = useMemo(() => {
+  //   if (!!filter) {
+  //     return restaurantList.filter(
+  //       (el) => el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1
+  //     );
+  //   } else {
+  //     return restaurantList;
+  //   }
+  // }, [filter, restaurantList]);
+
+  let filteredRestaurant;
+  if (!!filter) {
+    filteredRestaurant = restaurantList.filter(
+      (el) => el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1
+    );
+  } else {
+    filteredRestaurant = restaurantList;
+  }
 
   return (
     <div>
